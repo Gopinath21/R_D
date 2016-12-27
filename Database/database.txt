@@ -1,0 +1,25 @@
+DELETE
+The DELETE command is used to remove rows from a table. A WHERE clause can be used to only remove some rows. If no WHERE condition is specified, all rows will be removed. After performing a DELETE operation you need to COMMIT or ROLLBACK the transaction to make the change permanent or to undo it. Note that this operation will cause all DELETE triggers on the table to fire.
+
+
+TRUNCATE
+TRUNCATE removes all rows from a table. The operation cannot be rolled back and no triggers will be fired. As such, TRUCATE is faster and doesn't use as much undo space as a DELETE.
+
+
+DROP
+The DROP command removes a table from the database. All the tables' rows, indexes and privileges will also be removed. No DML triggers will be fired. The operation cannot be rolled back.
+
+
+Difference between TRUNCATE and DELETE commands
+Permalink Submitted by Dipal havsar (not verified) on Tue, 2006-09-19 08:39.
+1>TRUNCATE is a DDL command whereas DELETE is a DML command.
+
+2>TRUNCATE is much faster than DELETE.
+
+Reason:When you type DELETE.all the data get copied into the Rollback Tablespace first.then delete operation get performed.Thatswhy when you type ROLLBACK after deleting a table ,you can get back the data(The system get it for you from the Rollback Tablespace).All this process take time.But when you type TRUNCATE,it removes data directly without copying it into the Rollback Tablespace.Thatswhy TRUNCATE is faster.Once you Truncate you cann't get back the data.
+
+3>You cann't rollback in TRUNCATE but in DELETE you can rollback.TRUNCATE removes the record permanently.
+
+4>In case of TRUNCATE ,Trigger doesn't get fired.But in DML commands like DELETE .Trigger get fired.
+
+5>You cann't use conditions(WHERE clause) in TRUNCATE.But in DELETE you can write conditions using WHERE clause
