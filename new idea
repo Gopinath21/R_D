@@ -1,0 +1,40 @@
+Steamling the FOXTEL data setup:
+
+1) Fetch the FOXTEL exchanage:
+1) I have below exchanges which are cable of FOXTEL.
+
+2) FOXTEL vacant data :
+1) We can ask NPAMS team to provide vacant data under the above exchanbe along with SQ results ( FOXTEL over cable / FOXTEL over satellite )
+
+3) Validation the FOXTEL data:
+1) we can validate all tag IDs at EAI team end.( We can get good to use tag IDs from EAI team).
+
+
+Achivements:-
+
+1)  We no need to request FOXTEL team to provide the data.
+2)  We can save mininum 2 to 3 bussiness days for every data setup. (Some times more than week).
+3)  We no need to validate the FOXTEL data again with NPAMS as considering the correct process.
+
+-----------------------------------------------------------------
+
+Efforts:
+
+1) Efforts are done from setup.
+2) This step already I immplemented for FOSS IR.
+3) Setup 3 we can check .
+
+
+-----------------------------------------------------------------
+Is their anything more :
+-----------------------
+
+1)We can reuse the same foxtel tag id by chainging the FOXTEL FNN.( yes it is crazy ideal but , I can do it ) .
+
+
+
+
+
+
+
+
